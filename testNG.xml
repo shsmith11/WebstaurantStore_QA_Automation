@@ -22,7 +22,7 @@
             <class name="com.blockchain.ui.ExplorerTest"/>
         </classes>
     </test>
-    <test name="API Tests" enabled="true">
+    <test name="API Tests" enabled="false">
         <groups>
             <run>
                 <include name="API"/>
