@@ -1,0 +1,15 @@
+
+
+Conditions:
+
+1. Logged in user
+2. New empty wallet
+
+Steps:
+
+1. link to the wallet
+2. tap on "Buy Bitcoin"
+
+Expected : Buy crypto tab
+
+Actual: message "Oops. Something went wrong on our side. Please try again."
