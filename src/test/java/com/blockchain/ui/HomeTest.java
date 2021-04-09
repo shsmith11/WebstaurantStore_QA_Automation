@@ -17,7 +17,7 @@ public class HomeTest extends com.blockchain.ui.BaseTest {
     public static final boolean testCase5 = false;
     public static final boolean testCase6 = true;
 
-    @Test //(priority = 1, enabled = testCase1, groups = {"chrome"})
+    @Test (priority = 1, enabled = testCase1, groups = {"Chrome"})
     public void isHomePage(){
         homePage.openPage(PagesLinks.homeUrl);
         Assert.assertTrue(homePage.isHome());

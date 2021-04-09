@@ -22,7 +22,6 @@ public class ExplorerPage extends BasePage{
 
     public boolean isCorrect(String tickerName, Enum tickerParam){
         boolean isCorrect;
-
         String tickerValue = APIblockchain.getTickerParameterValueAPI(tickerName, tickerParam.toString().toLowerCase().trim());
         String tickerOnPage = explorerBTCPrice().getText().replace("$","").replace(",","");
         if (tickerOnPage.contains(tickerValue)){

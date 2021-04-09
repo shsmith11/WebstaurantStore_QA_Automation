@@ -5,7 +5,7 @@
     <test name="MainRun" enabled="true">
         <parameter name="browser" value="chrome"/>
         <parameter name="email" value="sh11user-test@gmail.com" />
-        <parameter name="password" value="te$t$tudent02" />
+        <parameter name="password" value="te$uSSnt02" />
         <groups>
             <run>
                 <exclude name="IE"/>
@@ -18,8 +18,8 @@
             </run>
         </groups>
         <classes>
-            <class name ="com.blockchain.ui.HomeTest"></class>
-            <class name ="com.blockchain.ui.ExplorerTest"></class>
+            <class name="com.blockchain.ui.HomeTest"/>
+            <class name="com.blockchain.ui.ExplorerTest"/>
         </classes>
     </test>
     <test name="API Tests" enabled="true">
@@ -30,7 +30,7 @@
             </run>
         </groups>
         <classes>
-            <class name ="com.blockchain.api.APITestBlockchain"></class>
+            <class name="com.blockchain.api.APITestBlockchain"/>
 
         </classes>
     </test>
