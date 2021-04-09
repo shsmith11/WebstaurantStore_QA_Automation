@@ -1,0 +1,28 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="TestSuite" parallel="tests" thread-count="1" verbose="1" >
+
+    <test name="MainRun" enabled="false">
+        <parameter name="browser" value="chrome"/>
+        <groups>
+            <run>
+                <exclude name="IE"/>
+                <include name="Firefox"/>
+                <include name="Chrome"/>
+                <include name="AllBrowsers"/>
+                <include name="functional"/>
+                <include name="API"/>
+                <include name="Smoke"/>
+            </run>
+        </groups>
+        <classes>
+            <class name ="com.blockchain.ui.HomeTest">
+                <parameter name="email" value="sh11user-test@gmail.com" />
+                <parameter name="password" value="te$t$tudent02" />
+            </class>
+
+        </classes>
+
+    </test>
+
+</suite>
