@@ -2,8 +2,10 @@
 
 <suite name="TestSuite" parallel="tests" thread-count="1" verbose="1" >
 
-    <test name="MainRun" enabled="false">
+    <test name="MainRun" enabled="true">
         <parameter name="browser" value="chrome"/>
+        <parameter name="email" value="sh11user-test@gmail.com" />
+        <parameter name="password" value="te$t$tudent02" />
         <groups>
             <run>
                 <exclude name="IE"/>
@@ -16,13 +18,20 @@
             </run>
         </groups>
         <classes>
-            <class name ="com.blockchain.ui.HomeTest">
-                <parameter name="email" value="sh11user-test@gmail.com" />
-                <parameter name="password" value="te$t$tudent02" />
-            </class>
+            <class name ="com.blockchain.ui.HomeTest"></class>
+            <class name ="com.blockchain.ui.ExplorerTest"></class>
+        </classes>
+    </test>
+    <test name="API Tests" enabled="true">
+        <groups>
+            <run>
+                <include name="API"/>
+                <include name="Smoke"/>
+            </run>
+        </groups>
+        <classes>
+            <class name ="com.blockchain.api.APITestBlockchain"></class>
 
         </classes>
-
     </test>
-
 </suite>

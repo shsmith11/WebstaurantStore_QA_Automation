@@ -274,10 +274,10 @@ public class Helpers extends BasePage {
         }
     }
 
-    public static String getH1Title() {
-        String title = driver.findElement(Locators.H1_TITLE).getText();
-        return title;
-    }
+//    public static String getH1Title() {
+//        String title = driver.findElement(Locators.H1_TITLE).getText();
+//        return title;
+//    }
 
     public static String getElementAttributeValue(WebElement element, String Attribute){
         return element.getAttribute(Attribute);

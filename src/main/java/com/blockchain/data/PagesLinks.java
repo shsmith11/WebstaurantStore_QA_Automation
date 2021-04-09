@@ -15,6 +15,7 @@ final public class PagesLinks {
     }
 
     public static String homeUrl = "https://www.blockchain.com";
+    public static String explorerUrl = "https://www.blockchain.com/explorer";
 
 
 

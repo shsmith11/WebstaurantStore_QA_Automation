@@ -17,7 +17,7 @@ public class APITestBlockchain {
         Assert.assertEquals(200,APIblockchain.getServerCodeResponce(responceData));
     }
 
-    @Test(groups = {"API"})
+    @Test(groups = {"API"})   // This test just for testing API data for development purpose
     public void testAPIGetCountryData(@Optional("") String symbol){
         //DataAPI dataAPI = new DataAPI();
         var responceData = APIblockchain.getTickerInfo(symbol);

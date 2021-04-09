@@ -22,10 +22,12 @@ public class BaseTest {
     protected WebDriver driver;
     protected SoftAssert softAssert = new SoftAssert();
     protected HomePage homePage;
+    protected ExplorerPage explorerPage;
 
 
     public void startUp(){
         homePage = new HomePage(driver);
+        explorerPage = new ExplorerPage(driver);
 
     }
     //public void openPage(String url){driver.get(url);}

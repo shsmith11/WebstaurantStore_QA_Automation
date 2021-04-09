@@ -24,8 +24,7 @@ final public class Data {
     public static String yearReg = Helpers.toString(Helpers.randomInt(1940,Helpers.getCurrentYear()-18));
 
     //Search Data
-    public static int minAgePrettywomanPage = 24;
-    public static int maxAgePrettywomanPage = 67;
+
     public static int imageOnPage = 12;
     public static int trys = 10;
     public static int tryMS = 100;
