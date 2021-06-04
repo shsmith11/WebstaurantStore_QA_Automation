@@ -1,4 +1,4 @@
-package com.blockchain.ui;
+package com.WebstaurantStore.ui;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -22,12 +22,10 @@ public class BaseTest {
     protected WebDriver driver;
     protected SoftAssert softAssert = new SoftAssert();
     protected HomePage homePage;
-    protected ExplorerPage explorerPage;
 
 
     public void startUp(){
         homePage = new HomePage(driver);
-        explorerPage = new ExplorerPage(driver);
 
     }
     //public void openPage(String url){driver.get(url);}
@@ -85,7 +83,7 @@ public class BaseTest {
 
     @AfterMethod
     public void tearDown() throws InterruptedException {
-       Thread.sleep(3000);
+      // Thread.sleep(1000);
        driver.quit();
     }
 

@@ -1,8 +1,9 @@
-package com.blockchain.ui;
+package com.WebstaurantStore.ui;
 
 
-import com.blockchain.data.Helpers;
-import com.blockchain.data.Locators;
+import com.WebstaurantStore.data.Data;
+import com.WebstaurantStore.data.Helpers;
+import com.WebstaurantStore.data.Locators;
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
@@ -24,14 +25,28 @@ public class HomePage extends BasePage{
         super(driver, explicitWait);
     }
 
-    public boolean isHome(){
-        String expectedHomeTitle =  "Blockchain.com - The Most Trusted Crypto Company";
-        try{
-            explicitWait.until(ExpectedConditions.titleContains(expectedHomeTitle));
-            return true;
-        } catch (TimeoutException err) {
-            return false;
-        }
+    public boolean serachTestResults(String validData) {
+
+        Helpers.getWebElement(Locators.searchInputMainPage).sendKeys(Data.searchDataHomeTest);
+        Helpers.getWebElement(Locators.searchButtonMainPage).click();
+        List<WebElement> newSearch = Helpers.getWebElementList(Locators.searchResults);
+        int validCount=0;
+            try {
+                for (int i = 0; i < newSearch.size(); i++) {
+                    if (newSearch.get(i).getText().trim().toLowerCase().contains(validData.toLowerCase())) {
+                        validCount++;
+                        System.out.println(validData+ "  found in " + "element #"+ i+ " - " + newSearch.get(i).getText());
+                    } else {
+                        System.out.println("element #"+ i+ " Has no "+ validData+ "  in " + newSearch.get(i).getText());
+
+                    }
+                }
+            } catch (NullPointerException e) {
+
+                System.out.println(e + "  No Elements Found");
+            }
+        System.out.println("Total matches  -   "+ validCount++);
+       return validCount==newSearch.size();
     }
 
 }

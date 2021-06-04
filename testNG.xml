@@ -18,8 +18,7 @@
             </run>
         </groups>
         <classes>
-            <class name="com.blockchain.ui.HomeTest"/>
-            <class name="com.blockchain.ui.ExplorerTest"/>
+            <class name="com.WebstaurantStore.ui.HomeTest"/>
         </classes>
     </test>
     <test name="API Tests" enabled="false">
@@ -30,7 +29,7 @@
             </run>
         </groups>
         <classes>
-            <class name="com.blockchain.api.APITestBlockchain"/>
+            <class name="com.WebstaurantStore.ui.HomeTest"/>
 
         </classes>
     </test>

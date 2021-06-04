@@ -1,4 +1,4 @@
-package com.blockchain.ui;
+package com.WebstaurantStore.ui;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.FluentWait;

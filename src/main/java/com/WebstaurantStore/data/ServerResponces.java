@@ -1,4 +1,4 @@
-package com.blockchain.data;
+package com.WebstaurantStore.data;
 
 public enum ServerResponces {
 

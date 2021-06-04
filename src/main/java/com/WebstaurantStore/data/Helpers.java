@@ -1,5 +1,5 @@
-package com.blockchain.data;
-import com.blockchain.ui.BasePage;
+package com.WebstaurantStore.data;
+import com.WebstaurantStore.ui.BasePage;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.*;
@@ -17,6 +17,13 @@ public class Helpers extends BasePage {
 
     public Helpers(WebDriver driver, WebDriverWait explicitWait) {
         super(driver, explicitWait);
+    }
+
+    static public WebElement getWebElement(String locator){
+        return driver.findElement(By.xpath(locator));
+    }
+    static public List<WebElement> getWebElementList(String locator){
+        return driver.findElements(By.xpath(locator));
     }
 
     static public void waitForLoad(WebDriver driver) {

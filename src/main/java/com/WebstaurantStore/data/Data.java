@@ -1,4 +1,4 @@
-package com.blockchain.data;
+package com.WebstaurantStore.data;
 
 import java.util.HashMap;
 
@@ -25,13 +25,14 @@ final public class Data {
 
     //Search Data
 
-    public static int imageOnPage = 12;
-    public static int trys = 10;
-    public static int tryMS = 100;
+    public static String searchDataHomeTest = "stainless work table";
+    public static String validationDataHomeTest_TABLES = "Tables";
+    public static String validationDataHomeTest_TABLE = "Table";
+
+
 
 
     //Expected Nav Menu Data
-    public static HashMap<Enum,String> expectedH1 = new HashMap<>();
-    public static HashMap<Enum,String> expectedTitles = new HashMap<>();
+
 
 }

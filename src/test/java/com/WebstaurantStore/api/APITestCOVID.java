@@ -1,4 +1,4 @@
-package com.blockchain.api;
+package com.WebstaurantStore.api;
 
 import io.restassured.path.json.JsonPath;
 import org.testng.Assert;

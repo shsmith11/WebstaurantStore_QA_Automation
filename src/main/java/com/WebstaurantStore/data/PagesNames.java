@@ -1,8 +1,16 @@
-package com.blockchain.data;
+package com.WebstaurantStore.data;
 
 public enum PagesNames {
     HOME,
-    WALLET,
-    EXCHANGE,
-    EXPLORER
+    RESTAURANT_EQUIPMENT,
+    COMMERCIAL_REFRIGERATION,
+    SMALLWARES,
+    STORAGE_TRANSPORT,
+    TABLETOP,
+    DISPOSABLES,
+    FURNITURE,
+    RESTAURANT_DINNERWARE,
+    FOOD_BEVERAGE,
+    JANITORIAL_SUPPLIES,
+    BUSINNES_TYPES
 }
