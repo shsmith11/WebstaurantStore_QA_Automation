@@ -2,13 +2,10 @@ package com.WebstaurantStore.ui;
 
 import com.WebstaurantStore.data.Data;
 import com.WebstaurantStore.data.PagesLinks;
-import com.WebstaurantStore.data.PagesNames;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
-import java.io.IOException;
 
 
 public class HomeTest extends com.WebstaurantStore.ui.BaseTest {
@@ -16,28 +13,34 @@ public class HomeTest extends com.WebstaurantStore.ui.BaseTest {
     @DataProvider(name = "ValidationData")
     public static Object[][] homePageSearchValidationData(){
         return new Object[][]{
-                {Data.validationDataHomeTest_TABLE},
-                {Data.validationDataHomeTest_TABLES},
-                {"tableware"},
+                // Validation data for matching,  Search request
+                {Data.validationDataHomeTest_TABLE, Data.searchDataHomeTest},
+                {Data.validationDataHomeTest_TABLES, Data.searchDataHomeTest}
+
         };
     }
 
     public static final boolean testCase1 = true;
-    public static final boolean testCase2 = true;
-    public static final boolean testCase3 = false;
-    public static final boolean testCase4 = false;
-    public static final boolean testCase5 = false;
-    public static final boolean testCase6 = false;
+
 
     @Test (dataProvider = "ValidationData",priority = 1, enabled = testCase1, groups = {"Chrome"})
-    public void searchTestResults_1(String validationData){
+    public void searchTestResults_1(String validationData, String searchData) {
         homePage.openPage(PagesLinks.homeUrl);
-        Assert.assertTrue(homePage.serachTestResults(validationData));
+        homePage.setInitialSearchUrl(searchData);
+
+        softAssert.assertTrue(homePage.checkSerachResultsForMatch(validationData, searchData));
+
+        homePage.setLastItemId(searchData);
+        homePage.addingToCart(searchData);
+        homePage.emptyCart();
+        //softAssert.assertTrue(homePage.cartItemCheckerAndDeleteSingleItem(homePage.getLastItemId()));
+
+        Assert.assertTrue(homePage.isDeleted(homePage.getLastItemId()));
     }
 
     @AfterMethod
     public void tearDown() throws InterruptedException {
-        // Thread.sleep(1000);
+        Thread.sleep(5000);
         driver.quit();
     }
 }

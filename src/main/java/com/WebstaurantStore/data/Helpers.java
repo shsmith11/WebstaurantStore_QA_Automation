@@ -22,6 +22,10 @@ public class Helpers extends BasePage {
     static public WebElement getWebElement(String locator){
         return driver.findElement(By.xpath(locator));
     }
+
+    static public By getByElement(String locator){
+        return By.xpath(locator);
+    }
     static public List<WebElement> getWebElementList(String locator){
         return driver.findElements(By.xpath(locator));
     }

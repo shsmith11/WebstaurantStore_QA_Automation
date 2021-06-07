@@ -4,8 +4,8 @@
 
     <test name="MainRun" enabled="true">
         <parameter name="browser" value="chrome"/>
-        <parameter name="email" value="sh11user-test@gmail.com" />
-        <parameter name="password" value="te$uSSnt02" />
+        <parameter name="email" value="" />
+        <parameter name="password" value="" />
         <groups>
             <run>
                 <exclude name="IE"/>

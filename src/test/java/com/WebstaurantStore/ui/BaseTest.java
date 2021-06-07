@@ -24,8 +24,10 @@ public class BaseTest {
     protected HomePage homePage;
 
 
+
     public void startUp(){
         homePage = new HomePage(driver);
+
 
     }
     //public void openPage(String url){driver.get(url);}
